@@ -55,10 +55,13 @@ app.get('/:currencyId', async (req, res) => {
     const apiUrl = myURL.href + `${currency}`
     const fetch_response = await fetch(apiUrl);
     const json = await fetch_response.json();
- 
+
     metricCounter()
-     
-    res.json(json);
+    
+    if (currency != "favicon.ico"){
+        res.json(json);
+    }
+    
 });
 
 app.get('/metrics', (req, res) => {
@@ -69,3 +72,5 @@ app.get('/metrics', (req, res) => {
 app.listen(PORT, function(){
 	console.log("Application listening on Port", PORT);
 });
+
+module.exports = app
