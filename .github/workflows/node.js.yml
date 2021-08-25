@@ -24,7 +24,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo "hello world"
+        
+    - name: building node package
+      run: npm run build
     
     - name: Building docker image
       uses: docker/build-push-action@v2
