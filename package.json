@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "mocha": "*",
     "node-fetch": "^2.6.1",
+    "npm": "^7.21.0",
     "prom-client": "^13.2.0"
   },
   "peerDependencies": {
