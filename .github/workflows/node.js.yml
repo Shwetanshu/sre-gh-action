@@ -25,6 +25,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: echo "hello world"
-    - run: docker build -t nodeapp:$(git rev-parse --short HEAD) .
-    - run: docker push nodeapp:$(git rev-parse --short HEAD)
+    
+    - name: Building docker image
+      uses: docker/build-push-action@v3
+      with:
+        image: shaktibxr/nodeapp
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        
+#     - run: docker build -t nodeapp:$(git rev-parse --short HEAD) .
+#     - run: docker push nodeapp:$(git rev-parse --short HEAD)
 #     - run: npm test
