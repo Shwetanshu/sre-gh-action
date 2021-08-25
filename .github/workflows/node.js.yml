@@ -27,7 +27,7 @@ jobs:
     - run: echo "hello world"
     
     - name: Building docker image
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v2
       with:
         image: shaktibxr/nodeapp
         registry: docker.io
