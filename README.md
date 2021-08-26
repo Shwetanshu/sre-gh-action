@@ -10,8 +10,12 @@ Implemented Nodejs to call remote API and performed testing using chaijs & mocha
 
 There are two environments created in github action :
 1. DEV - Performing docker build and push to docker repository. Slack notification to channel after completing docker push to docker hub.
+```Environment used: SLACK_BOT_TOKEN ```
+```Secrets used : DOCKERHUB_TOKEN & DOCKERHUB_USERNAME```
    
 2. TEST - Running test script to check the return value and types
+
+
 
 ## Terraform scripts
 
