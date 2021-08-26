@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "appmetrics-prometheus": "^3.1.0",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "express": "^4.17.1",
