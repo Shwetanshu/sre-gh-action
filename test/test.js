@@ -37,22 +37,22 @@ describe("API testing", () => {
         });
     });
 
-    // Testing /:currencyId endpoint with some random coins
-    describe("GET /XYZ", () => {
-        it("It should return Invalid currency id", (done) => {
-            const currencyId = "XYZ";
-            chai.request(app)
-                .get('/' + currencyId) 
-                .end((err, response) => {
-                    response.should.have.status(200);
-                    response.body.should.be.a('object');
-                    if (response.body.errors[0]){
-                        console.log("There is no currency with name ",currencyId)
-                    }
-                done();
-                });
-        });
-    });
+    // // Testing /:currencyId endpoint with some random coins
+    // describe("GET /XYZ", () => {
+    //     it("It should return Invalid currency id", (done) => {
+    //         const currencyId = "XYZ";
+    //         chai.request(app)
+    //             .get('/' + currencyId) 
+    //             .end((err, response) => {
+    //                 response.should.have.status(200);
+    //                 response.body.should.be.a('object');
+    //                 if (response.body.errors[0]){
+    //                     console.log("There is no currency with name ",currencyId)
+    //                 }
+    //             done();
+    //             });
+    //     });
+    // });
 
         // Testing /:currencyId endpoint with some random coins
     describe("GET /XYZ", () => {

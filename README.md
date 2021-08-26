@@ -4,7 +4,7 @@ helm install crypto-nodeapp ./helm
 
 # Terraform execution
 
-terraform init {s3_bucket_config}
+terraform init -backend-config="key=bucket-shwetanshu/my_app_sre.tfstate" -backend-config="region=ap-south-1"
 terraform plan -out plan.out
 terraform apply plan.out
 
